@@ -17,4 +17,9 @@ public class GuestTest {
         assertEquals("Bob", guest.hasName());
     }
 
+    @Test
+    public void isGuestCheckedIn(){
+        assertEquals(false, guest.getIsCheckedIn());
+    }
+
 }

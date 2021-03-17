@@ -29,6 +29,7 @@ public class Bedroom {
     public void addGuestToBedroom(Guest guest1) {
         if(!this.isCapacityExceeded()) {
             this.guests.add(guest1);
+            guest1.checkGuestInOut();
         }
     }
 
@@ -42,6 +43,13 @@ public class Bedroom {
         } else return true;
 
 
+    }
+
+    public void removeGuestFromBedroom(Guest guest1) {
+        if(this.getGuestCount() > 0) {
+            this.guests.remove(guest1);
+            guest1.checkGuestInOut();
+        }
     }
 }
 
